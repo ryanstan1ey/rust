@@ -1,10 +1,17 @@
 #![allow(unused)]
+use std::mem;
 
 fn reverse(pair: (i32, bool)) -> (bool, i32) {
  // `let` can be used to bind the members of a tuple to variables
  let (integer, boolean) = pair;
 
  (boolean, integer)
+}
+
+fn analyze_slice(slice: &[i32]) {
+  println!("first element of the array is {}.", slice[0]);
+  println!("second element of the array is {}.", slice[1]);
+  println!("the slice has {} elements.", slice.len());
 }
 
 #[derive(Debug)]
@@ -83,4 +90,25 @@ fn main() {
 
   let matrix = Matrix(1.2, 2.3, 3.4, 4.5);
   println!("{:?}", matrix);
+
+
+  // 3. Arrays
+  let xs: [i32; 5] = [1, 2, 3, 4, 5];
+
+  // Initializing all values to a single value
+  let ys: [i32; 500] = [0;500];
+
+  println!("first element of xs: {} and second element: {}", xs[0], xs[1]);
+  println!("length of ys: {}", ys.len());
+
+  // Arrays are stack allocated
+ println!("Array xs occupies {} bytes", mem::size_of_val(&xs));
+ println!("Array ys occupies {} bytes", mem::size_of_val(&ys));
+
+ // Arrays can be automatically borrowed as slices
+ println!("borrow the whole array as a slice");
+ analyze_slice(&xs);
+
+ //out-of-bounds indexing causes compilation error
+ // println!("{}", xs[10]);
 }
