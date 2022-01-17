@@ -2,3 +2,6 @@ rust-by-example/1_hello/hello
 rust-by-example/2_primitives/primitives
 cli-app/grrs/target
 rust-by-example/3_custom_types/custom_types
+rust-by-example/3_custom_types/constants
+rust-by-example/3_custom_types/enums
+rust-by-example/3_custom_types/linked_list
