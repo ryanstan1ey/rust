@@ -7,3 +7,5 @@ rust-by-example/3_custom_types/enums
 rust-by-example/3_custom_types/linked_list
 rust-by-example/4_variable_bindings/mutability
 rust-by-example/4_variable_bindings/scope_and_shadowing
+rust-by-example/4_variable_bindings/declare_first
+rust-by-example/4_variable_bindings/freezing
