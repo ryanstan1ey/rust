@@ -5,3 +5,4 @@ rust-by-example/3_custom_types/custom_types
 rust-by-example/3_custom_types/constants
 rust-by-example/3_custom_types/enums
 rust-by-example/3_custom_types/linked_list
+rust-by-example/4_variable_bindings/mutability
